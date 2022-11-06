@@ -105,7 +105,7 @@ namespace ExchangeRateSystem.ServiceCore.Services
 
             dbContext.Add(exchangeRate);
             dbContext.SaveChanges();
-            return Result.Success(exchangeRate, "Success");
+            return exchangeRate.Id > 0 ? Result.Success(exchangeRate, "Success") : Result.Fail("Problem during exchange rate creation");
 
         }
 

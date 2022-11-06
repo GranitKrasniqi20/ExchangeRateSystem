@@ -10,7 +10,6 @@ namespace ExchangeRateSystem.RepositoryCore.Repositories.Contracts
     public interface IExchangeRateRepository
     {
         List<ExchangeRate> GetAll();
-        ExchangeRate? GetLastExchangeRate();
         List<ExchangeRate> ExchangeRatesByUserId(int userId);
     }
 }

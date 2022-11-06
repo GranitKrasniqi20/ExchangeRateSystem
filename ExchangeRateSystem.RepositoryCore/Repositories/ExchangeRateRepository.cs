@@ -21,11 +21,6 @@ namespace ExchangeRateSystem.RepositoryCore.Repositories
             var exchangeRates = dbContext.ExchangeRates.ToList();
             return exchangeRates;
         }
-        public ExchangeRate? GetLastExchangeRate()
-        {
-            var exchangeRate = dbContext.ExchangeRates.OrderByDescending(a => a.Id).FirstOrDefault();
-            return exchangeRate;
-        }
 
         public List<ExchangeRate> ExchangeRatesByUserId(int userId)
         {
